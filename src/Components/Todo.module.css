@@ -1,0 +1,38 @@
+.list {
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #1d3557;
+  font-size: 20px;
+}
+
+.list p {
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+
+.list input {
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.list button {
+  background-color: #e63946;
+  color: #f1faee;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.list button:hover {
+  background-color: #d80a1b;
+}
+
+.completed {
+  text-decoration: line-through;
+}
