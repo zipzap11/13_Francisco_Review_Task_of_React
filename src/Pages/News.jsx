@@ -27,7 +27,7 @@ function News() {
   }, []);
 
   return (
-    <>
+    <div className={classes.bgImg}>
       <Header />
       <h3 className={classes.title}>News today</h3>
       <div className={classes.container}>
@@ -52,7 +52,7 @@ function News() {
           </ul>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

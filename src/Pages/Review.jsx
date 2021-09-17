@@ -1,5 +1,9 @@
 import React from "react";
 import classes from "./Review.module.css";
+import line from "../Assets/line.png";
+import footer from "../Assets/footerl.png";
+import { Link } from "react-router-dom";
+
 function News() {
   return (
     <div className={classes.body}>
@@ -26,7 +30,7 @@ function News() {
           </li>
         </ul>
         <div className={classes.divider}>
-          <img src="assets/line.png" alt="img" />
+          <img src={line} alt="line" />
         </div>
         <div className={`${classes.feedback} ${classes.fullwidth}`}>
           Thanks for contacting us!
@@ -34,13 +38,13 @@ function News() {
           We will be in touch with you shortly.
         </div>
         <div className={classes.fullwidth}>
-          <a href="/">
+          <Link to="/">
             <button className={classes.btn}>Home</button>
-          </a>
+          </Link>
         </div>
       </div>
       <footer class={classes.footer}>
-        <img src="assets/footerl.png" alt="img" />
+        <img src={footer} alt="footer" />
       </footer>
     </div>
   );

@@ -4,7 +4,13 @@
 }
 
 .title {
-  font-size: 30px;
-  letter-spacing: 1.5px;
+  font-size: 40px;
+  letter-spacing: 2.5px;
   text-align: center;
+  margin-top: 20px;
+  color: #19345e;
+}
+
+.bgImg {
+  background: url(../Assets/bg-img\ 1.png);
 }

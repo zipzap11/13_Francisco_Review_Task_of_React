@@ -18,20 +18,17 @@ header {
   flex-direction: row;
   justify-content: space-between;
 }
-.myList-nav li a {
+.link {
   text-decoration: none;
   color: #19345e;
   font-size: 13px;
+}
+.link:hover {
+  color: #f47522;
 }
 
 .active {
   color: #f47522;
 }
-
-.myList-nav li a:hover,
-.myList-nav li a:active {
-  color: #f47522;
-}
-.myList-nav li a.active {
-  color: #f47522;
-}
+/* #f47522 */
+/* #19345e */

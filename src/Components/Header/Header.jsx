@@ -12,22 +12,39 @@ function Header() {
         </Link>
         <ul className={classes["myList-nav"]}>
           <li>
-            <NavLink activeClassName={classes.active} to="/">
+            <NavLink
+              className={classes.link}
+              activeClassName={classes.active}
+              to="/"
+              exact
+            >
               HOME
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/about">
+            <NavLink
+              className={classes.link}
+              activeClassName={classes.active}
+              to="/about"
+            >
               ABOUT
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/news">
+            <NavLink
+              className={classes.link}
+              activeClassName={classes.active}
+              to="/news"
+            >
               NEWS
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/contact">
+            <NavLink
+              className={classes.link}
+              activeClassName={classes.active}
+              to="/contact"
+            >
               CONTACT
             </NavLink>
           </li>
