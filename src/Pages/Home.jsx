@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Components/Header/Header";
 import classes from "./Home.module.css";
 import girlImg from "../Assets/girl.png";
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className={classes.bgImg}>
@@ -20,7 +21,9 @@ function Home() {
           <p className={`${classes["text"]} ${classes["text-md"]}`}>
             I build things for the web
           </p>
-          <button className={classes.btn}>Get In Touch</button>
+          <Link to="/contact">
+            <button className={classes.btn}>Get In Touch</button>
+          </Link>
         </div>
       </main>
     </div>

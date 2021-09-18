@@ -3,30 +3,32 @@ import classes from "./Review.module.css";
 import line from "../Assets/line.png";
 import footer from "../Assets/footerl.png";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function News() {
+  const formData = useSelector((state) => state.formData.formData);
   return (
     <div className={classes.body}>
       <div className={classes.container}>
         <ul>
           <li className={classes.data}>
             <p>Full Name</p>
-            <p>: data.fullname</p>
+            <p>: {formData.fullName}</p>
           </li>
           <li className={classes.data}>
             <p>Email Address</p>
-            <p>: data.email</p>
+            <p>: {formData.email}</p>
           </li>
           <li className={classes.data}>
             <p>Phone Number</p>
-            <p>: data.phone</p>
+            <p>: {formData.phoneNumber}</p>
           </li>
           <li className={classes.data}>
             <p>Nationality</p>
-            <p>: data.nationality</p>
+            <p>: {formData.nationality}</p>
           </li>
           <li className={classes.data}>
-            <p>data.message</p>
+            <p>{formData.message}</p>
           </li>
         </ul>
         <div className={classes.divider}>

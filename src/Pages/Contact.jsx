@@ -7,6 +7,8 @@ import {
   validatePhoneNumber,
 } from "../Validation/index";
 import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
+import { addFormData } from "../Store/formDataSlice";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -21,6 +23,8 @@ function Contact() {
     email: "",
     phoneNumber: "",
   });
+
+  const dispatch = useDispatch();
   const history = useHistory();
 
   function handleChange(e) {
@@ -38,9 +42,7 @@ function Contact() {
 
     if (name === "email") {
       const valEmail = validateEmail(value);
-      console.log(valEmail);
       if (!valEmail.status) {
-        console.log("masuk");
         setError((prev) => ({ ...prev, [name]: valEmail.message }));
       } else {
         setError((prev) => ({ ...prev, [name]: "" }));
@@ -71,7 +73,6 @@ function Contact() {
     }
 
     const valEmail = validateEmail(formData.email);
-    console.log(valEmail);
     if (!valEmail.status) {
       setError((prev) => ({ ...prev, email: valEmail.message }));
       formIsValid = false;
@@ -84,6 +85,7 @@ function Contact() {
     }
 
     if (formIsValid) {
+      dispatch(addFormData(formData));
       history.push("/review");
     }
   }
@@ -144,9 +146,9 @@ function Contact() {
               id=""
             >
               <option value="">Selected</option>
-              <option value="INA">Indonesia</option>
-              <option value="FR">French</option>
-              <option value="AUS">Australia</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="French">French</option>
+              <option value="Australia">Australia</option>
             </select>
           </div>
           <div className={classes["form-control"]}>
