@@ -8,6 +8,7 @@ function News() {
   const [news, setNews] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     setIsLoading(true);
     fetch(

@@ -93,6 +93,12 @@ form {
   color: #495057;
 }
 
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 .btn {
   background-color: #f47522;
   width: 96px;

@@ -43,7 +43,7 @@ function News() {
           </Link>
         </div>
       </div>
-      <footer class={classes.footer}>
+      <footer className={classes.footer}>
         <img src={footer} alt="footer" />
       </footer>
     </div>
