@@ -35,9 +35,8 @@ function News() {
           <img src={line} alt="line" />
         </div>
         <div className={`${classes.feedback} ${classes.fullwidth}`}>
-          Thanks for contacting us!
-          <br />
-          We will be in touch with you shortly.
+          <p>Thanks for contacting us!</p>
+          <p>We will be in touch with you shortly.</p>
         </div>
         <div className={classes.fullwidth}>
           <Link to="/">

@@ -9,6 +9,13 @@ export function validatePhoneNumber(number) {
     };
   }
 
+  if (!isValid) {
+    return {
+      status: false,
+      message: "Please enter a valid phone number (can only contain numbers)",
+    };
+  }
+
   if (number.length < 9) {
     return {
       status: false,
@@ -23,12 +30,7 @@ export function validatePhoneNumber(number) {
     };
   }
 
-  if (isValid) {
-    return { status: true };
-  } else if (!isValid) {
-    return {
-      status: false,
-      message: "Please enter a valid phone number (can only contain numbers)",
-    };
-  }
+  return {
+    status: true,
+  };
 }

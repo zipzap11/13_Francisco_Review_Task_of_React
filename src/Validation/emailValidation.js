@@ -12,7 +12,7 @@ export function validateEmail(email) {
   } else {
     return {
       status: false,
-      message: "Please enter a valid email value",
+      message: "Please enter a valid email address!",
     };
   }
 }

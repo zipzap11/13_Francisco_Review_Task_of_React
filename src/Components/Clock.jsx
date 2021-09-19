@@ -20,7 +20,7 @@ function Clock() {
         fontSize: "25px",
         color: "#19345e",
         textAlign: "right",
-        marginRight: "20px",
+        marginRight: "100px",
         marginTop: "10px",
       }}
     >

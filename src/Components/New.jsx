@@ -4,7 +4,7 @@ import Card from "../Components/Card";
 
 function New({ author, title, image }) {
   return (
-    <li className={classes.list}>
+    <li data-testid="new" className={classes.list}>
       <Card>
         <div className={classes.contain}>
           <div className={classes.wrapper}>

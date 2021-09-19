@@ -101,45 +101,52 @@ function Contact() {
         <form onSubmit={handleSubmit} action="">
           <h1>Contact Us</h1>
           <div className={classes["form-control"]}>
-            <label className={classes.required}>Full Name</label>
+            <label htmlFor="fullName" className={classes.required}>
+              Full Name
+            </label>
             <input
+              aria-labelledby="fullName"
+              data-testid="fullname"
               name="fullName"
+              type="text"
               onChange={handleChange}
               placeholder="Your Full Name Here..."
               value={formData.fullName}
-              type="text"
-              required
             />
             <p className={classes.error}>{error.fullName}</p>
           </div>
           <div className={classes["form-control"]}>
-            <label className={classes.required}>Email Address</label>
+            <label htmlFor="email" className={classes.required}>
+              Email Address
+            </label>
             <input
+              data-testid="email"
               name="email"
               onChange={handleChange}
               placeholder="example@domail.com"
               value={formData.email}
               type="text"
-              required
             />
             <p className={classes.error}>{error.email}</p>
           </div>
           <div className={classes["form-control"]}>
-            <label className={classes["required"]}>Phone Number</label>
+            <label htmlFor="phoneNumber" className={classes["required"]}>
+              Phone Number
+            </label>
             <input
+              data-testid="phonenumber"
               name="phoneNumber"
               onChange={handleChange}
               placeholder="08573890xxxxx"
               value={formData.phoneNumber}
               type="text"
-              required
             />
             <p className={classes.error}>{error.phoneNumber}</p>
           </div>
           <div className={classes["form-control"]}>
-            <label>Nationality</label>
+            <label htmlFor="nationality">Nationality</label>
             <select
-              required
+              data-testid="select"
               name="nationality"
               onChange={handleChange}
               value={formData.nationality}
@@ -152,15 +159,16 @@ function Contact() {
             </select>
           </div>
           <div className={classes["form-control"]}>
-            <label>Message</label>
+            <label htmlFor="message">Message</label>
             <textarea
+              data-testid="message"
               name="message"
               onChange={handleChange}
               value={formData.message}
               placeholder="Your Full Name Here..."
             ></textarea>
           </div>
-          <button className={classes["btn"]} type="submit">
+          <button data-testid="submit" className={classes["btn"]} type="submit">
             Submit
           </button>
         </form>

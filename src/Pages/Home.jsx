@@ -25,7 +25,9 @@ function Home() {
             I build things for the web
           </p>
           <Link to="/contact">
-            <button className={classes.btn}>Get In Touch</button>
+            <button data-test-id="btn" className={classes.btn}>
+              Get In Touch
+            </button>
           </Link>
         </div>
       </main>

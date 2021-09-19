@@ -5,7 +5,7 @@ import Skeleton from "react-loading-skeleton";
 
 function LoadingNew() {
   return (
-    <li className={classes.list}>
+    <div className={classes.list}>
       <Card>
         <div className={classes.contain}>
           <div className={classes.wrapper}>
@@ -19,7 +19,7 @@ function LoadingNew() {
           </p>
         </div>
       </Card>
-    </li>
+    </div>
   );
 }
 
